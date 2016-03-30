@@ -33,7 +33,21 @@ class Infected(object):
     def damage(self, amount):
         self.health -= amount 
     
-
+class Player(object):
+    def __init__(self, health = 8000, attack = 50):
+        self.health = health 
+        self.attack = attack 
+        
+    def attacks(self, target):
+        target.damage(self.attack)
+        if target.health <= 0:
+            return "Enemy Down!!"
+        else:
+            return target.health
+            
+    def damage(self, amount):
+        self.health -= amount
         
 zombie = Zombie()
 infected = Infected()
+me = Player()
