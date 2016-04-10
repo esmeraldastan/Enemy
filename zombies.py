@@ -35,6 +35,6 @@ class Infected(object):
         self.health -= amount 
     
 
-        
+#key        
 zombie = Zombie()
 infected = Infected()
