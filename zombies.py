@@ -1,7 +1,9 @@
 #Enemies in the game
+#print "attack"
+
 #command = raw_input('>')
 
-#print "attack"
+
 
 
 #HP OF ZOMBIE
@@ -29,13 +31,9 @@ zombie = Zombie()
 #player status 
 class player(object):
     
-    def __init__(self, name, health = 50000, attack = 500):
-        self.name = name 
+    def __init__(self, health = 50000, attack = 500):
+        self.attack = attack 
         self.health = health 
-        
-class single_player(player):
-    def __init__(self, name, health = 49800):
-        super(single_player, self).__init__(name, health = 49800)
         
         
     def attacks(self, target):
@@ -44,10 +42,15 @@ class single_player(player):
             return "Enemy down!"
         else:
             return target.health
+            
+    def damage(self, amount):
+        self.health -= amount
         
-me = single_player(player)        
+me = player()        
 
-#if command == "me.attacks         
+#if command == "me.attacks(zombie)":
+    
+        
                 
                                 
 #HP OF INFECTED
