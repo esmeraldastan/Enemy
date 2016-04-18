@@ -48,8 +48,7 @@ class player(object):
         
 me = player()        
 
-#if command == "me.attacks(zombie)":
-    
+
         
                 
                                 
