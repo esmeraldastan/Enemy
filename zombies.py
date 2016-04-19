@@ -1,7 +1,7 @@
 #Enemies in the game
-#print "attack"
+print "attack"
 
-#command = raw_input('>')
+command = raw_input('>')
 
 
 
@@ -26,7 +26,7 @@ class Zombie(object):
         self.health -= amount
         
 zombie = Zombie()
-
+#dx = zombie.damage
 
 #player status 
 class player(object):
@@ -47,8 +47,12 @@ class player(object):
         self.health -= amount
         
 me = player()        
+tg = me.health 
 
-
+if command == "me.attacks(zombie)":
+    hp = tg - zombie.damage
+    print hp, "is now" 
+    print me.attacks(zombie)
         
                 
                                 
