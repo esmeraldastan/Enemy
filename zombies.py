@@ -1,3 +1,4 @@
+
 #Enemies in the game
 print "attack"
 
@@ -26,7 +27,7 @@ class Zombie(object):
         self.health -= amount
         
 zombie = Zombie()
-#dx = zombie.damage
+
 
 #player status 
 class player(object):
@@ -47,12 +48,19 @@ class player(object):
         self.health -= amount
         
 me = player()        
-tg = me.health 
 
-if command == "me.attacks(zombie)":
-    hp = tg - zombie.damage
-    print hp, "is now" 
-    print me.attacks(zombie)
+life = me.health
+
+while life > 0:
+    if command == "me.attacks(zombie)":
+        print me.attacks(zombie)
+        
+    '''hp = life - 15000    
+    if hp == 0:
+        print "you lose"
+        print "Your health is now", hp'''
+        
+    
         
                 
                                 
