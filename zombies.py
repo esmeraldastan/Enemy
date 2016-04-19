@@ -1,4 +1,3 @@
-
 #Enemies in the game
 print "attack"
 
@@ -51,9 +50,11 @@ me = player()
 
 life = me.health
 
-while life > 0:
-    if command == "me.attacks(zombie)":
-        print me.attacks(zombie)
+#while life > 0:
+if command == "me.attacks(zombie)":
+    hp = life - 15000
+    print hp
+    print me.attacks(zombie)
         
     '''hp = life - 15000    
     if hp == 0:
