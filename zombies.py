@@ -3,9 +3,6 @@
 #Enemies in the game
 print "attack"
 
-#Test iterator
-#i = 0
-
 #HP OF ZOMBIE
 class Zombie(object):
     def __init__(self, health = 5000, attack = 15000):
