@@ -1,7 +1,10 @@
+#import sys
+
 #Enemies in the game
 print "attack"
 
-command = raw_input('>')
+#Test iterator
+#i = 0
 
 #HP OF ZOMBIE
 class Zombie(object):
@@ -47,26 +50,30 @@ me = player()
 
 life = me.health
 
-while life > 0:
-   
-    if command == "me.attacks(zombie)":
-        hp = life - zombie.attack 
-        print "your health is now", hp
-        print "you have slaid your enemy with", me.attacks(zombie),"damage"
+while me.health > 0:
+    #i += 1
+    command = raw_input('>')
+    if command == "attack":
+        me.health -= zombie.attack 
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", me.attacks(zombie),"damage"
         
+
         
-    if zombie.health == 0:
+    if zombie.health <= 0:
         print
         print
-        print "Great you have diffeted the zombie"
+        print "Great, you have defeated the zombie"
         
         break
         
-    print 
+    print #i
     
-    if me.health == 0:
+    if me.health <= 0:
         
-        print "sorry you died"
+        print "Sorry, you died."
+        break
+        
     
 
 #HP OF INFECTED
@@ -87,7 +94,7 @@ class Infected(object):
     def damage(self, amount):
         self.health -= amount 
 infected = Infected()    
-while life > 0:
+'''while life > 0:
    
     if command == "me.attacks(infected)":
         hp = life - infected.attack 
@@ -106,7 +113,7 @@ while life > 0:
     
     if me.health == 0:
         
-        print "sorry you died"
+        print "sorry you died"'''
         
 zombie = Zombie()
 
