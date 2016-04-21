@@ -5,7 +5,7 @@ print "attack"
 
 #HP OF ZOMBIE
 class Zombie(object):
-    def __init__(self, health = 5000, attack = 15000):
+    def __init__(self, health = 5000, attack = 1500):
         self.health = health
         self.attack = attack 
         
@@ -53,7 +53,7 @@ while me.health > 0:
     if command == "attack":
         me.health -= zombie.attack 
         print "Your health is now", me.health 
-        print "You attacked your enemy for", me.attacks(zombie),"damage"
+        print "You attacked your enemy for", me.attacks(zombie),"damage."
         
 
         
@@ -90,16 +90,18 @@ class Infected(object):
     #DAMAGE TAKEN         
     def damage(self, amount):
         self.health -= amount 
-infected = Infected()    
-'''while life > 0:
+        
+infected = Infected() 
    
-    if command == "me.attacks(infected)":
-        hp = life - infected.attack 
-        print "your health is now", hp
-        print "you have slaid your enemy with", me.attacks(infected),"damage"
+while me.health > 0:
+   
+    if command == "attack":
+        me.health -= infected.attack 
+        print "Your health is now", me.health
+        print "You attacked your enemy for", me.attacks(infected),"damage."
         
         
-    if infected.health == 0:
+    if infected.health <=0:
         print
         print
         print "Great you have diffeted the zombie"
@@ -108,9 +110,9 @@ infected = Infected()
         
     print 
     
-    if me.health == 0:
+    if me.health <= 0:
         
-        print "sorry you died"'''
+        print "sorry you died"
         
 zombie = Zombie()
 
