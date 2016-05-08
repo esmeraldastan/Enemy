@@ -1,7 +1,4 @@
-#import sys
-
 #Enemies in the game
-print "attack"
 
 #HP OF ZOMBIE
 class Zombie(object):
@@ -45,16 +42,29 @@ class player(object):
         
 me = player()        
 
-life = me.health
 
 while me.health > 0:
-    #i += 1
     command = raw_input('>')
-    if command == "attack":
+    if command == "stab":# use of dagger
+        me.health -= zombie.attack 
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", dagger.stab(zombie),"damage."
+    elif command == "attack":# basic attack
         me.health -= zombie.attack 
         print "Your health is now", me.health 
         print "You attacked your enemy for", me.attacks(zombie),"damage."
-        
+    elif command == "shoot":#use of cross bow
+        me.health -= zombie.attack 
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", cross_bow.shoot(zombie),"damage."     
+    elif command == "cut off":#use of sword
+        me.health -= zombie.attack 
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", sword.cut_off(zombie),"damage."
+    elif command == "slaughter":#use of axe
+        me.health -= zombie.attack 
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", axe.slaughter(zombie),"damage."
 
         
     if zombie.health <= 0:
@@ -70,6 +80,7 @@ while me.health > 0:
         
         print "Sorry, you died."
         break
+
         
     
 
@@ -94,12 +105,28 @@ class Infected(object):
 infected = Infected() 
    
 while me.health > 0:
-   
-    if command == "attack":
-        me.health -= infected.attack 
-        print "Your health is now", me.health
-        print "You attacked your enemy for", me.attacks(infected),"damage."
-        
+    command = raw_input('>')
+    if command == "stab":# use of dagger
+        me.health -= infected.attack  
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", dagger.stab(zombie),"damage."
+    elif command == "attack":# basic attack
+        me.health -= infected.attack  
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", me.attacks(zombie),"damage."
+    elif command == "shoot":#use of cross bow
+        me.health -= infected.attack  
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", cross_bow.shoot(zombie),"damage."     
+    elif command == "cut off":#use of sword
+        me.health -= infected.attack  
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", sword.cut_off(zombie),"damage."
+    elif command == "slaughter":#use of axe
+        me.health -= infected.attack  
+        print "Your health is now", me.health 
+        print "You attacked your enemy for", axe.slaughter(zombie),"damage."
+    
         
     if infected.health <=0:
         print
@@ -114,5 +141,5 @@ while me.health > 0:
         
         print "sorry you died"
         
-zombie = Zombie()
+
 
