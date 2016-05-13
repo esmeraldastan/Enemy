@@ -42,7 +42,7 @@ class player(object):
         
 me = player()        
 
-
+#use for zombie 
 while me.health > 0:
     command = raw_input('>')
     if command == "stab":# use of dagger
@@ -104,6 +104,7 @@ class Infected(object):
         
 infected = Infected() 
    
+#use for infected 
 while me.health > 0:
     command = raw_input('>')
     if command == "stab":# use of dagger
