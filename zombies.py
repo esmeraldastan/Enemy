@@ -1,5 +1,5 @@
 #Enemies in the game
-
+print "attack"
 #HP OF ZOMBIE
 class Zombie(object):
     def __init__(self, health = 5000, attack = 1500):
@@ -105,7 +105,7 @@ class Infected(object):
 infected = Infected() 
    
 #use for infected 
-while me.health > 0:
+'''while me.health > 0:
     command = raw_input('>')
     if command == "stab":# use of dagger
         me.health -= infected.attack  
@@ -141,6 +141,6 @@ while me.health > 0:
     if me.health <= 0:
         
         print "sorry you died"
-        
+        '''
 
 
